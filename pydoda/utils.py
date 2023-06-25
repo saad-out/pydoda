@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-DATASET_DIR = '../doda-dataset'
+DATASET_DIR = '../dataset'
 
 CUSTOM_CATEGORIES = [
     'malenames',
