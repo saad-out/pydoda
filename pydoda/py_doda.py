@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 
-from .utils import DATASET_DIR
+from .utils import DATASET_DIR, CUSTOM_CATEGORIES
 
 
 class Pydoda:
@@ -65,4 +65,13 @@ class Pydoda:
             'syntactic': self.get_syntactic_categories(),
             'x-tra': self.get_xtra(),
             'sentences': ['sentences']
+        }
+
+    def classes(self) -> dict[str, list[str]]:
+        all = self.get_semantic_categories() + self.get_syntactic_categories() + self.get_xtra()
+        categories = [category for category in all if category not in CUSTOM_CATEGORIES]
+        return {
+            'Category': categories,
+            'CustomCategory': CUSTOM_CATEGORIES,
+            'Sentence': ['sentences']
         }
