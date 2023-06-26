@@ -90,3 +90,21 @@ class Loader:
             raise ValueError(f'Invalid columns')
         except ValueError:
             raise ValueError(f'Invalid value: {value}')
+    
+    def filter_rows_by_string(self, column: str, value: str) -> list[dict[str, str]]:
+        """
+        Returns a list of dictionaries containing the values of the specified rows.
+
+        Args:
+            column: The name of the column to search in.
+            value: The value to search for.
+        
+        Returns:
+            A list of dictionaries containing the values of the specified rows.
+        """
+        try:
+            return self.__df.loc[self.__df[column].str.contains(value).fillna(False)].to_dict(orient='records')
+        except KeyError:
+            raise ValueError(f'Invalid column name: {column}')
+        except ValueError:
+            raise ValueError(f'Invalid value: {value}')

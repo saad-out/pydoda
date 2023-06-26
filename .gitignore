@@ -24,4 +24,4 @@ Thumbs.db
 
 # Ignore Jupyter Notebook files
 .ipynb_checkpoints/
-.ipynb
+*.ipynb

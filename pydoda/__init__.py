@@ -12,10 +12,11 @@ Classes:
     CustomCategory: Class for creating custom categories.
 
 """
-
 from .py_doda import Pydoda
 from .category import Category
 from .custom_category import CustomCategory
+from .sentence import Sentence
+
 
 __all__ = ['Pydoda', 'Category', 'CustomCategory']
 
