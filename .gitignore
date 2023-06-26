@@ -1,0 +1,23 @@
+# Ignore Python virtual environment
+myvenv/
+
+# Ignore compiled Python bytecode
+*.pyc
+
+# Ignore local development settings
+.env
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore package build artifacts
+dist/
+build/
+*.egg-info/
+
+# Ignore system-specific files
+*.DS_Store
+Thumbs.db
