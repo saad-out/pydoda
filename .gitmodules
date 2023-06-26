@@ -1,3 +1,3 @@
-[submodule "dataset"]
-	path = dataset
+[submodule "pydoda/dataset"]
+	path = pydoda/dataset
 	url = https://github.com/darija-open-dataset/dataset.git
