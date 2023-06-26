@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 
-from utils import DATASET_DIR
+from .utils import DATASET_DIR
 
 
 class Pydoda:

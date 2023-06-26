@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 import os
 
-from loader import Loader
-from utils import CUSTOM_CATEGORIES, DATASET_DIR
+from .loader import Loader
+from .utils import CUSTOM_CATEGORIES, DATASET_DIR
 
 
 class CustomCategory:
