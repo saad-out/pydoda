@@ -8,7 +8,7 @@ CUSTOM_CATEGORIES = [
     '(in)definite',
     'conjug_past',
     'conjug_present',
-    'imperetives',
+    'imperatives',
     'masculine_feminine_plural',
     'verb_to_noun',
     'idioms',
