@@ -1,8 +1,10 @@
-# <p align="center">PyDODa: A Wrapper Python Library for DODa</p>
+# <p align="center">PyDODa: A Wrapper Python Library for The Darija Open Dataset</p>
 
 <p align="center">
   <img src="https://github.com/saad-out/pydoda/blob/main/static/images/pydoda_logo-removebg-preview.png" style="width:500px;"/>
 </p>
+
+**"This software includes data sourced from Darija Open Dataset." [GitHub](https://github.com/darija-open-dataset/dataset)**
 
 # What is DODa ?
 From the [DODa's Official GitHub repository](https://github.com/darija-open-dataset/dataset) :
@@ -110,3 +112,17 @@ english_translation = my_category.get_english_translation('mch')
 print(english_translation)
 # Output: 'cat'
 ```
+
+# Clone Repository
+To clone the Pydoda repository, use the following command:
+```
+git clone https://github.com/saad-out/pydoda.git --recurse-submodule
+```
+The `--recurse-submodule` flag is used to ensure that you also clone the submodules associated with the repository. In this case, the Pydoda library has a submodule named dataset (The Darija Open Dataset), which contains the linguistic dataset used by Pydoda. Cloning the repository with the `--recurse-submodule` flag ensures that you have access to both the Pydoda library code and the necessary dataset.
+
+# License
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+The *Pydoda Library* is released under the MIT License. This license allows you to use, modify, and distribute the code for both commercial and non-commercial purposes. It grants you the freedom to adapt the library to your specific needs while providing the flexibility to incorporate it into your projects without restrictions.
+
+For more details, please refer to the LICENSE file in the repository.
