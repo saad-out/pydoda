@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
+import os
 
-DATASET_DIR = 'pydoda/dataset'
+
+PACKAGE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATASET_DIR = os.path.join(PACKAGE_DIR, "dataset")
+
 
 CUSTOM_CATEGORIES = [
     'malenames',
