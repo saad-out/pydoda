@@ -1,7 +1,7 @@
 # <p align="center">PyDODa: A Wrapper Python Library for The Darija Open Dataset</p>
 
 <p align="center">
-  <img src="https://github.com/saad-out/pydoda/blob/main/static/images/pydoda_logo-removebg-preview.png" style="width:500px;"/>
+  <img src="https://github.com/saad-out/pydoda/blob/main/docs/images/pydoda_logo-removebg-preview.png" style="width:500px;"/>
 </p>
 
 **"This software includes data sourced from Darija Open Dataset." [GitHub](https://github.com/darija-open-dataset/dataset)**
