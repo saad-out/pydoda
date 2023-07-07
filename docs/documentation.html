@@ -1,0 +1,470 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pydoda Documentation</title>
+    <link rel="icon" type="image/x-icon" href="images/pydoda-logo.png">
+    <meta name="description" content="A simple HTML/CSS DocumentationTemplate">
+    <meta name="author" content="Carlos Yllobre">
+
+    <link rel="stylesheet" href="css/style.css?">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap"
+        rel="stylesheet">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+        integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <style>
+        :target::before {
+            content: "";
+            display: block;
+            height: 120px;
+            /* Adjust this value to match the height of your header */
+            margin: -120px 0 0;
+            /* Adjust this value to match the negative height of your header */
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="navbar clear nav-top">
+        <div class="row content">
+            <a href="#"><img class="logo" src="images/pydoda-logo.png"></a>
+            <a class="right" style="text-decoration: underline;" href="https://github.com/saad-out/pydoda/"><i class="fas fa-book"></i>&nbsp;
+                Github Repository</a>
+            <!-- <a class="right" href="mailto:yourapp@email.com" target="_blank"><i class="fas fa-paper-plane"></i>&nbsp;
+                yourapp@email.com</a> -->
+        </div>
+    </div>
+
+    <div class="container clear">
+        <div class="row wrapper">
+
+            <div class="sidepanel">
+
+                <a class="title" href="#introduction">Introduction</a>
+
+                <a class="section" href="#about-the-library">About the library</a>
+                <a class="section" href="#versions">Supported Versions</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#gettingstarted">Getting Started</a>
+
+                <a class="section" href="#installation">Installation</a>
+                <a class="section" href="#get-source">Get source code</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#usage">Usage</a>
+
+                <a class="section" href="#pydoda">Pydoda</a>
+                <a class="section" href="#category">Category</a>
+                <a class="section" href="#customcategory">CustomCategory</a>
+                <a class="section" href="#sentence">Sentence</a>
+
+                <div class="divider left"></div>
+
+                <a class="title" href="#moreinfo">More Info</a>
+
+                <div class="space double"></div>
+
+            </div>
+
+            <div class="right-col">
+
+
+                <div id="head-title">
+                    <h1>PyDODa: DODa Wrapper</h1>
+                </div>
+
+                <img src="images/pydoda-logo.png" alt="pydoda-logo">
+
+                <pre><code class="python">
+&gt;&gt;&gt; from pydoda import Category
+&gt;&gt;&gt; 
+&gt;&gt;&gt; # Create an instance of Category
+&gt;&gt;&gt; my_category = Category('semantic', 'animals')
+&gt;&gt;&gt; 
+&gt;&gt;&gt; # Get the Darija translation of a word
+&gt;&gt;&gt; darija_translation = my_category.get_darija_translation('dog')
+&gt;&gt;&gt; print(darija_translation)
+'klb'
+&gt;&gt;&gt; 
+&gt;&gt;&gt; # Get the English translation of a word
+&gt;&gt;&gt; english_translation = my_category.get_english_translation('mch')
+&gt;&gt;&gt; print(english_translation)
+'cat'
+</code></pre>
+
+
+                <h1 id="introduction">Introduction</h1>
+
+                <h2 id="about-the-library">About the library:</h2>
+
+                <p>Pydoda is a comprehensive Python library that serves as a convenient wrapper for the DODa dataset,
+                    offering seamless access and powerful analysis capabilities. The DODa dataset is a valuable
+                    linguistic resource that contains various categories of words, phrases, and sentences in Darija
+                    (Moroccan Arabic). <br> <br>
+
+                    Pydoda simplifies the process of working with the DODa dataset, allowing researchers, developers,
+                    and language enthusiasts to explore and leverage the rich linguistic content it offers. The library
+                    provides an intuitive and efficient interface to access different categories within the dataset,
+                    retrieve spellings, translations, and perform various analyses. <br> <br>
+
+                    By integrating Pydoda into your Python workflow, you gain access to a wide range of functionalities
+                    to extract insights from the DODa dataset. Whether you need to analyze specific semantic or
+                    syntactic categories, retrieve translations, explore variations in spellings, or investigate
+                    linguistic patterns, Pydoda empowers you to unlock the potential of the DODa dataset in an
+                    effortless manner.</p>
+
+                <h2 id="versions">Supported Versions:</h2>
+
+                <p><b>pydoda v1.0.0.</b> Pydoda libray is currently on version 1.0.0.</p>
+
+                <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+                <h1 id="gettingstarted">Getting Started</h1>
+
+                <!-- <p id="installingapp"><b>Important:</b> This line is for an important information.</p> -->
+
+                <h2 id="installation">Installation</h2>
+
+                <p style="margin: 0%;">Pydoda can be easily installed using <code>pip</code>, the Python package
+                    manager:
+                </p>
+                <pre style="margin: 0%; display: inline;">
+                    <code class="bash" style="white-space: nowrap;">$ pip3 install pydoda</code>
+                </pre>
+
+                <h2 id="get-source">Get source code</h2>
+
+                <p style="margin: 0%;">The source code for Pydoda is available on <a
+                        href="https://github.com/saad-out/pydoda/" target="_blank">GitHub</a>. To clone it locally, use
+                    the following command:</p>
+                <pre style="margin: 0%; display: inline;">
+                    <code class="bash" style="white-space: nowrap;">$ git clone https://github.com/saad-out/pydoda.git --recurse-submodule</code>
+                </pre>
+
+
+                <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+
+                <h1 id="usage">Usage</h1>
+
+                <h2 id="pydoda"> <i>class</i> Pydoda</h2>
+                <p>The Pydoda class provides methods to access and work with Doda datasets. <br>
+                    This class allows you to retrieve and explore different categories of Doda datasets, such as
+                    semantic categories, syntactic categories, and additional extra categories. <br> It also provides a
+                    method to retrieve all available categories.</p>
+
+                <h3>Methods & Attributes:</h3>
+                <ul>
+                    <li>
+                        <div>
+                            <h3>Pydoda.get_semantic_categories() -> list[str]</h3>
+                            <p>Returns a list of available semantic categories.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Pydoda.get_syntactic_categories() -> list[str]</h3>
+                            <p>Returns a list of available syntactic categories.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Pydoda.get_xtra() -> list[str]</h3>
+                            <p>Returns a list of available extra categories.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Pydoda.all() -> dict[str, list[str]]</h3>
+                            <p>Returns a dictionary containing all available categories.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Pydoda.classes() -> dict[str, list[str]]</h3>
+                            <p>Returns a dictionary containing all available classes.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 id="category"><i>class</i> Category</h2>
+                <p>The Category class represents a specific category in the Doda dataset. <br>
+
+                    It provides methods to access and retrieve information from the category, such as the number of
+                    entries,
+                    available spellings, English and Darija word translations, and Darija word variations.</p>
+
+                <h3>Methods & Attributes:</h3>
+                <ul>
+                    <li>
+                        <div>
+                            <h3>Category.type -> str</h3>
+                            <p>Returns the type of the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Category.category -> str</h3>
+                            <p>Returns the name of the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Category.entries() -> dict[str, int]</h3>
+                            <p>Returns the number of entries in the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Category.get_spellings() -> list[str]</h3>
+                            <p>Returns a list of available spellings in the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Category.get_english_words() -> list</h3>
+                            <p>Returns a list of available English words in the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Category.get_darija_words(spelling: str = 'n1') -> list</h3>
+                            <p>Returns a list of available Darija words in the category.</p>
+                            <p style="margin: 0%;"><strong>Args:</strong></p>
+                            <ul style="margin: 0%;">
+                                <li><code>spelling</code>: The spelling to retrieve. Defaults to 'n1'.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Category.get_darija_translation(word: str, spelling: str = 'n1') -> str</h3>
+                            <p>Returns the Darija translation of the specified word.</p>
+                            <p style="margin: 0%;"><strong>Args:</strong></p>
+                            <ul style="margin: 0%;">
+                                <li><code>word</code>: The word to retrieve.</li>
+                                <li><code>spelling</code>: The spelling to retrieve. Defaults to 'n1'.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Category.get_english_translation(word: str, spelling: str = 'n1') -> str</h3>
+                            <p>Returns the English translation of the specified word.</p>
+                            <p style="margin: 0%;"><strong>Args:</strong></p>
+                            <ul style="margin: 0%;">
+                                <li><code>word</code>: The word to retrieve.</li>
+                                <li><code>spelling</code>: The spelling to retrieve. Defaults to 'n1'.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Category.get_darija_variations(word: str) -> dict[str, str]</h3>
+                            <p>Returns a dictionary containing the Darija variations of the specified word.</p>
+                            <p style="margin: 0%;"><strong>Args:</strong></p>
+                            <ul style="margin: 0%;">
+                                <li><code>word</code>: The word to retrieve.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 id="customcategory"><i>class</i> CustomCategory</h2>
+                <p>The CustomCategory class represents a custom category in the Doda dataset. <br>
+                    It provides methods to access and retrieve information from the custom category, such as the number
+                    of entries,
+                    available columns, retrieving a specific column, retrieving a specific row, and getting a value from
+                    a row.
+                </p>
+
+                <h3>Methods & Attributes:</h3>
+                <ul>
+                    <li>
+                        <div>
+                            <h3>CustomCategory.type -> str</h3>
+                            <p>Returns the type of the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>CustomCategory.category -> str</h3>
+                            <p>Returns the name of the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>CustomCategory.entries() -> dict[str, int]</h3>
+                            <p>Returns the number of entries in the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>CustomCategory.get_all_columns() -> list[str]</h3>
+                            <p>Returns a list of available columns in the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>CustomCategory.get_column(column: str) -> list</h3>
+                            <p>Returns a list of values in the specified column.</p>
+                            <p style="margin: 0%;"><strong>Args:</strong></p>
+                            <ul style="margin: 0%;">
+                                <li><code>column</code>: The name of the column to retrieve.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>CustomCategory.get_row(column: str, value: str) -> dict[str, str]</h3>
+                            <p>Returns a dictionary containing the values of the specified row.</p>
+                            <p style="margin: 0%;"><strong>Args:</strong></p>
+                            <ul style="margin: 0%;">
+                                <li><code>column</code>: The name of the column to search in.</li>
+                                <li><code>value</code>: The value to search for.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>CustomCategory.get_column_for_row(column: str, value: str, return_column: str) -> str
+                            </h3>
+                            <p>Returns the value of the specified column for the specified row.</p>
+                            <p style="margin: 0%;"><strong>Args:</strong></p>
+                            <ul style="margin: 0%;">
+                                <li><code>column</code>: The name of the column to search in.</li>
+                                <li><code>value</code>: The value to search for.</li>
+                                <li><code>return_column</code>: The name of the column to return the value from.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <h2 id="sentence"><i>class</i> Sentence</h2>
+                <p>The Sentence class represents sentences in the Doda dataset. <br>
+                    It provides methods to access and retrieve information from the sentences, such as the number of
+                    entries,
+                    available spellings, English and Darija word translations, and Darija word variations.
+                </p>
+
+                <h3>Methods & Attributes:</h3>
+                <ul>
+                    <li>
+                        <div>
+                            <h3>Sentence.type -> str</h3>
+                            <p>Returns the type of the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Sentence.category -> str</h3>
+                            <p>Returns the name of the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Sentence.entries() -> dict[str, int]</h3>
+                            <p>Returns the number of entries in the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Sentence.get_english_sentences() -> list[str]</h3>
+                            <p>Returns a list of all English sentences in the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Sentence.get_darija_sentences() -> list[str]</h3>
+                            <p>Returns a list of all Darija sentences in the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Sentence.get_darija_translation(sentence: str) -> str</h3>
+                            <p>Returns the Darija translation of the given English sentence.</p>
+                            <p style="margin: 0%;"><strong>Args:</strong></p>
+                            <ul style="margin: 0%;">
+                                <li><code>sentence</code>: The English sentence to translate.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Sentence.get_english_translation(sentence: str) -> str</h3>
+                            <p>Returns the English translation of the given Darija sentence.</p>
+                            <p style="margin: 0%;"><strong>Args:</strong></p>
+                            <ul style="margin: 0%;">
+                                <li><code>sentence</code>: The Darija sentence to translate.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Sentence.get_translation_by_substring(substring: str, language: str) -> list[dict[str,
+                                str]]</h3>
+                            <p>Returns a list of translations that contain the given substring.</p>
+                            <p style="margin: 0%;"><strong>Args:</strong></p>
+                            <ul style="margin: 0%;">
+                                <li><code>substring</code>: The substring to search for.</li>
+                                <li><code>language</code>: The language of the substring.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+                <h1 id="moreinfo">More Info</h1>
+
+
+                <p>For more information, contributions, and bug reports, please visit the <a
+                        href="https://github.com/saad-out/pydoda" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-github"></i> GitHub repository</a>.</p>
+
+                <p>Follow the developer on social media:</p>
+                <ul>
+                    <li><a href="https://twitter.com/saadout1" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="https://github.com/saad-out" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/saad-outchakoucht-1193b923b/" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                </ul>
+
+                <p>For any inquiries, please contact the developer at <a
+                        href="mailto:outsaad03@gmail.com">Gmail</a>.</p>
+
+                <div class="doublespace"></div>
+                <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
