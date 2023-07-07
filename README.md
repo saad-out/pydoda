@@ -113,6 +113,9 @@ print(english_translation)
 # Output: 'cat'
 ```
 
+# Documentation
+For a detailed documentation on the Pydoda library, please refer to the [official Pydoda documentation](https://saad-out.github.io/pydoda/).
+
 # Clone Repository
 To clone the Pydoda repository, use the following command:
 ```
