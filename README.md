@@ -28,7 +28,7 @@ $ pip3 install pydoda
 Pydoda provides a simple and intuitive way to access the linguistic content of the DODa dataset. You can use the `Pydoda` class to retrieve various categories and information from the dataset.
 
 Here's an example of how to use `Pydoda`:
-```
+```python
 from pydoda import Pydoda
 
 # Create an instance of Pydoda
@@ -96,7 +96,7 @@ Sentences Categories:
 You can use the `Category` class to retrieve specific linguistic information from a chosen category.
 
 Here's an example of how to use `Category`:
-```
+```python
 from pydoda import Category
 
 # Create an instance of Category
