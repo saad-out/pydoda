@@ -67,6 +67,8 @@ class Loader:
         """
         try:
             return self.__df.loc[self.__df[column] == value].to_dict(orient='records')[0]
+        except IndexError:
+            raise ValueError(f'Invalid value: {value}')
         except KeyError:
             raise ValueError(f'Invalid column name: {column}')
         except ValueError:
