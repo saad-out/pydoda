@@ -53,6 +53,15 @@ class Pydoda:
         """
         return [category.replace('.csv', '') for category in os.listdir(f'{self.__dataset}/x-tra')]
     
+    def get_ongoing(self) -> list[str]:
+        """
+        Returns a list of ongoing categories.
+        
+        Returns:
+            A list of ongoing categories.
+        """
+        return [category.replace('.csv', '') for category in os.listdir(f'{self.__dataset}/ongoing')]
+    
     def all(self) -> dict[str, list[str]]:
         """
         Returns a dictionary containing all available categories.
@@ -64,6 +73,7 @@ class Pydoda:
             'semantic': self.get_semantic_categories(),
             'syntactic': self.get_syntactic_categories(),
             'x-tra': self.get_xtra(),
+            'ongoing': self.get_ongoing(),
             'sentences': ['sentences']
         }
 
@@ -72,6 +82,6 @@ class Pydoda:
         categories = [category for category in all if category not in CUSTOM_CATEGORIES]
         return {
             'Category': categories,
-            'CustomCategory': CUSTOM_CATEGORIES,
+            'CustomCategory': CUSTOM_CATEGORIES + self.get_ongoing(),
             'Sentence': ['sentences']
         }
