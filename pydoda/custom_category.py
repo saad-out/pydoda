@@ -14,11 +14,11 @@ class CustomCategory:
     """
     def __init__(self, type, category) -> None:
         self.__dataset = DATASET_DIR
-        if type not in ['semantic', 'syntactic', 'x-tra']:
+        if type not in ['semantic', 'syntactic', 'x-tra', 'ongoing']:
             raise ValueError(f'Invalid category type: {type}')
         else:
             self.__type = type
-        if category not in CUSTOM_CATEGORIES:
+        if type != 'ongoing' and category not in CUSTOM_CATEGORIES:
             raise ValueError(f'Invalid CustomCategory: {category}, try Category class instead')
         type_dir = self.type + ' categories' if self.type in ['semantic', 'syntactic'] else self.type
         if (category + '.csv') not in os.listdir(f'{self.__dataset}/{type_dir}'):
