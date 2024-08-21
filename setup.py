@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pydoda",
-    version="1.0.3",
+    version="1.2.1",
     author="Saad Outchakoucht",
     author_email="outsaad03@gmail.com",
     description="A wrapper Python library for working with the DODa dataset",
@@ -37,6 +37,8 @@ setuptools.setup(
             "dataset/semantic categories/*",
             "dataset/syntactic categories/*",
             "dataset/x-tra/*",
+            "dataset/sentences/*",
+            "dataset/ongoing/*",
         ]
     },
     python_requires=">=3.6",

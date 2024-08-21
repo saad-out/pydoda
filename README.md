@@ -88,9 +88,12 @@ X-tra Categories:
 - weird
 - proverbs
 - utils
+- shorts
 
 Sentences Categories:
 - sentences
+
+# etc...
 ```
 
 You can use the `Category` class to retrieve specific linguistic information from a chosen category.
