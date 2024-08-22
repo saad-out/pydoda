@@ -16,7 +16,7 @@ class Sentence:
         self.__dataset = DATASET_DIR
         self.__type = self.__category = 'sentences'
         try:
-            self.__loader = Loader(self.__dataset, 'sentences.csv')
+            self.__loader = Loader(self.__dataset, 'sentences/sentences.csv')
         except ValueError:
             raise ValueError('Error loading category file')
     
@@ -57,7 +57,7 @@ class Sentence:
         Returns:
             A list of all English sentences in the category.
         """
-        return self.__loader.get_column('english')
+        return self.__loader.get_column('eng')
     
     def get_darija_sentences(self) -> list[str]:
         """
@@ -68,33 +68,44 @@ class Sentence:
         """
         return self.__loader.get_column('darija')
     
-    def get_darija_translation(self, sentence: str) -> str:
+    def get_arabic_sentences(self) -> list[str]:
+        """
+        Returns a list of all arabic-written darija sentences in the category.
+
+        Returns:
+            A list of all arabic-written darija sentences in the category.
+        """
+        return self.__loader.get_column('darija_ar')
+    
+    def get_darija_translation(self, sentence: str, language: str = 'darija') -> str:
         """
         Returns the Darija translation of the given English sentence.
 
         Args:
             sentence: The English sentence to translate.
+            language: The language of the returned translation. Defaults to 'darija'.
 
         Returns:
             The Darija translation of the given English sentence.
         """
         try:
-            return self.__loader.get_word('english', sentence, 'darija')
+            return self.__loader.get_word('eng', sentence, language)
         except ValueError:
             return None
     
-    def get_english_translation(self, sentence: str) -> str:
+    def get_english_translation(self, sentence: str, language: str = 'darija') -> str:
         """
         Returns the English translation of the given Darija sentence.
 
         Args:
             sentence: The Darija sentence to translate.
+            language: The language of the sentence . Defaults to 'darija'.
 
         Returns:
             The English translation of the given Darija sentence.
         """
         try:
-            return self.__loader.get_word('darija', sentence, 'english')
+            return self.__loader.get_word(language, sentence, 'eng')
         except ValueError:
             return None
 
@@ -112,6 +123,6 @@ class Sentence:
         try:
             return self.__loader.filter_rows_by_string(language, substring)
         except KeyError:
-            raise ValueError(f'Invalid language: {language}, try "english" or "darija"')
+            raise ValueError(f'Invalid language: {language}, try "eng" or "darija" or "darija_ar"')
         except ValueError:
             return None

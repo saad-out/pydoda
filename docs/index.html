@@ -193,6 +193,12 @@
                     </li>
                     <li>
                         <div>
+                            <h3>Pydoda.get_ongoing() -> list[str]</h3>
+                            <p>Returns a list of available ongoing categories.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
                             <h3>Pydoda.all() -> dict[str, list[str]]</h3>
                             <p>Returns a dictionary containing all available categories.</p>
                         </div>
@@ -399,21 +405,29 @@
                     </li>
                     <li>
                         <div>
-                            <h3>Sentence.get_darija_translation(sentence: str) -> str</h3>
+                            <h3>Sentence.get_arabic_sentences() -> list[str]</h3>
+                            <p>Returns a list of all arabic-written darija sentences in the category.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <h3>Sentence.get_darija_translation(sentence: str, language: str = 'darija') -> str</h3>
                             <p>Returns the Darija translation of the given English sentence.</p>
                             <p style="margin: 0%;"><strong>Args:</strong></p>
                             <ul style="margin: 0%;">
                                 <li><code>sentence</code>: The English sentence to translate.</li>
+                                <li><code>language</code>: The language of the returned translation. Defaults to 'darija'.</li>
                             </ul>
                         </div>
                     </li>
                     <li>
                         <div>
-                            <h3>Sentence.get_english_translation(sentence: str) -> str</h3>
+                            <h3>Sentence.get_english_translation(sentence: str, language: str = 'darija') -> str</h3>
                             <p>Returns the English translation of the given Darija sentence.</p>
                             <p style="margin: 0%;"><strong>Args:</strong></p>
                             <ul style="margin: 0%;">
                                 <li><code>sentence</code>: The Darija sentence to translate.</li>
+                                <li><code>language</code>: The language of the sentence. Defaults to 'darija'.</li>
                             </ul>
                         </div>
                     </li>

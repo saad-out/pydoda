@@ -67,6 +67,8 @@ class Loader:
         """
         try:
             return self.__df.loc[self.__df[column] == value].to_dict(orient='records')[0]
+        except IndexError:
+            raise ValueError(f'Invalid value: {value}')
         except KeyError:
             raise ValueError(f'Invalid column name: {column}')
         except ValueError:
@@ -103,7 +105,9 @@ class Loader:
             A list of dictionaries containing the values of the specified rows.
         """
         try:
-            return self.__df.loc[self.__df[column].str.contains(value).fillna(False)].to_dict(orient='records')
+            filtered_df = self.__df.loc[self.__df[column].str.contains(value, na=False)]
+            filtered_df = filtered_df.infer_objects(copy=False)
+            return filtered_df.to_dict(orient='records')
         except KeyError:
             raise ValueError(f'Invalid column name: {column}')
         except ValueError:

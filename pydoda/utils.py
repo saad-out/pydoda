@@ -17,4 +17,5 @@ CUSTOM_CATEGORIES = [
     'verb_to_noun',
     'idioms',
     'proverbs',
+    'shorts',
 ]
